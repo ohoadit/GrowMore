@@ -1,12 +1,32 @@
 import streamlit as st
-# import praw
 import pandas as pd
 import numpy as np
+from dataset import *
 
-st.sidebar.write('Sidebar init')
-options = ["a", "b", "c"]
-selected_stock = st.sidebar.selectbox("Select one", options)
-st.subheader("Subheader")
-# st.sidebar.button('Button 1', on_click = None)
 
-# posts = praw.Reddit(cl)
+
+def main():
+
+    st.sidebar.title('Select Asset Type')
+
+
+
+    options = ["Stocks","Crypto"]
+
+    choice = st.sidebar.selectbox("Select one", options)
+    # st.subheader("Subheader")
+    
+
+    if choice == "Stocks":
+
+        st.subheader("Stock name")
+        st.subheader("plot")
+        st.subheader("checkbox for techical indicator")
+
+        
+
+
+
+
+if __name__ == '__main__':
+    main()

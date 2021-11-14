@@ -1,0 +1,19 @@
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+
+dataset/
+venv/
+__pycache__/
+.vscode/
+
+## dont track these files
+
+*/*.zip
+*/*.tar
+*/*.csv
+
+projectenv/*
+
+instructions.txt
