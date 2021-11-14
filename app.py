@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 import datetime as dt
 
 files = os.listdir('preprocessed')
-print(files)
+print(sorted(files))
 
 companies = ['Bank of America', 'Capital One', 'Goldman Sachs', 'JP Morgan Chase', 'Morgan Stanley']
 
@@ -42,9 +42,9 @@ def main():
                 stats = pd.read_csv(f"output/{files[i]}", index_col = 0)
                 st.subheader(companies[i])
                 st.dataframe(stats)
+                st.metric("Change", stats.values[0][1], f"{round(stats.values[0][2], 2)}%")
                 selected = st.checkbox('Show graph', key = companies[i])
-                if (selected):
-                    
+                if (selected):                   
                     df1= df[:len(df)-90]
                     # preds = df[len(df)-90]
                     print("***",df1)
