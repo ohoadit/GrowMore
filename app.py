@@ -37,7 +37,6 @@ def main():
                 if (selected):
                     fig  = px.line(df, x="Date", y="Close",title=companies[i])
                     st.plotly_chart(fig, use_container_width=True)
-                    st.table(df[:20])
             except:
                 print('Error')
 
