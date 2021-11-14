@@ -10,7 +10,7 @@ __pycache__/
 
 ## dont track these files
 
-*/*.zip
+# */*.zip
 */*.tar
 # */*.csv
 

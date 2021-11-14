@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 import datetime as dt
 
 files = os.listdir('preprocessed')
-# print(files)
+print(files)
 
 companies = ['Bank of America', 'Capital One', 'JP Morgan Chase', 'Goldman Sachs',  'Morgan Stanley']
 
